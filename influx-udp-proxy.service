@@ -1,0 +1,10 @@
+[Unit]
+Description=Little proxy to resend data from UDP to influxdb
+ 
+[Service]
+ExecStart=/usr/local/bin/influx-udp-proxy
+StandardOutput=null
+ 
+[Install]
+WantedBy=multi-user.target
+Alias=influx-udp-proxy.service
